@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Avtar creator</title>
+</head>
+<body>
+    <section>
+        <div>
+            <p class="head">
+                Your names make avtar for you.
+            </p>
+        </div>
+        <div class="container">
+            <label>Enter your name : </label><br>
+            <input type="text" name="" id="nameid" placeholder="Enter name"><br>
+            <div class="imgdiv">
+                <img src="/AVATAR/Hnet.com-image.jpg" alt="" srcset="" class="imgchange" height="200" width="200">
+            </div>
+            <button>
+                Click Here
+            </button>
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+     $('button').click(function(){
+      const name = $('#nameid').val();
+      alert(name);
+     $('.imgchange').attr('src',`https://joeschmoe.io/api/v1/${name}`);
+     const b = $('.imgchange');
+     console.log(b);
+
+  });
+ });
+    </script>
+</body>
+</html>
+
+
